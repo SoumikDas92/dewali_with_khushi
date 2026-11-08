@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#170f25">
+  <meta name="description" content="A little Diwali surprise, made with love by Tomato for Khushi. Light a diya, open a wish, and let the night sparkle.">
+  <title>A little Diwali light for Khushi — from Tomato</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas class="fireworks-canvas" id="fireworks-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to the surprise</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="A little light for Khushi, home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="5.2" fill="currentColor"/>
+          <path d="M20 2.8v6.1M20 31.1v6.1M2.8 20h6.1m22.2 0h6.1M7.85 7.85l4.32 4.32m15.66 15.66 4.32 4.32m0-24.3-4.32 4.32M12.17 27.83l-4.32 4.32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="11.1" stroke="currentColor" stroke-opacity=".72"/>
+        </svg>
+      </span>
+      <span class="brand-copy">little light<small>DIWALI, WITH LOVE</small></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#lights">Light a diya</a>
+      <a href="#note">The note</a>
+      <a href="#rangoli">Rangoli</a>
+    </nav>
+
+    <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Turn sound on">
+      <svg class="sound-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 10v4h3.5l4.5 3.5v-11L7.5 10H4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <path class="sound-wave" d="M15 9a4.2 4.2 0 0 1 0 6m2.4-8.4a7.6 7.6 0 0 1 0 10.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path class="sound-muted" d="m15 10 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span id="sound-label">Sound off</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>A SMALL DIWALI SURPRISE</p>
+        <h1 id="hero-title">For the light<br>you bring,<br><em>Khushi.</em></h1>
+        <p class="hero-intro">A little corner of the night, made just for you. Light a few diyas, open a wish, and let the Diwali sparkle begin.</p>
+        <p class="from-to"><span>FROM TOMATO</span><i aria-hidden="true">✦</i><span>TO KHUSHI</span></p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#lights">
+            <span>Open your surprise</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="text-link" href="#note">Read your little note <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-footnote"><span class="tiny-star" aria-hidden="true">✦</span> Best opened with a little time to smile.</div>
+      </div>
+
+      <div class="hero-art" role="img" aria-label="A glowing diya beneath a crescent moon, surrounded by tiny stars">
+        <div class="art-orbit art-orbit-one"></div>
+        <div class="art-orbit art-orbit-two"></div>
+        <div class="art-moon" aria-hidden="true"></div>
+        <span class="art-star art-star-one" aria-hidden="true">✦</span>
+        <span class="art-star art-star-two" aria-hidden="true">✧</span>
+        <span class="art-star art-star-three" aria-hidden="true">✦</span>
+        <span class="art-star art-star-four" aria-hidden="true">·</span>
+        <div class="art-arch">
+          <div class="arch-glow"></div>
+          <svg class="hero-flower" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+            <g stroke="currentColor" stroke-opacity=".62" stroke-width="1">
+              <circle cx="110" cy="110" r="82"/>
+              <circle cx="110" cy="110" r="69" stroke-dasharray="2 5"/>
+              <circle cx="110" cy="110" r="54"/>
+              <path d="M110 28v164M28 110h164M52 52l116 116M168 52 52 168"/>
+              <path d="M110 43c17 19 17 34 0 50-17-16-17-31 0-50Zm67 67c-19 17-34 17-50 0 16-17 31-17 50 0Zm-67 67c-17-19-17-34 0-50 17 16 17 31 0 50Zm-67-67c19-17 34-17 50 0-16 17-31 17-50 0Z"/>
+            </g>
+            <circle cx="110" cy="110" r="5" fill="currentColor"/>
+          </svg>
+          <div class="hero-diya" aria-hidden="true">
+            <span class="hero-flame"></span>
+            <span class="hero-wick"></span>
+            <span class="hero-bowl"><i></i></span>
+            <span class="hero-diya-shadow"></span>
+          </div>
+          <span class="art-caption">one little light, just for you</span>
+        </div>
+        <div class="art-signature"><span class="signature-sparkle">✦</span><span>made with love<br><strong>by Tomato</strong></span></div>
+      </div>
+      <a class="scroll-cue" href="#lights" aria-label="Scroll to the diyas"><span></span>SCROLL TO GLOW</a>
+    </section>
+
+    <section class="lights-section section-wrap" id="lights" aria-labelledby="lights-title">
+      <div class="section-heading lights-heading">
+        <div>
+          <p class="section-kicker"><span>01</span> A MOMENT OF LIGHT</p>
+          <h2 id="lights-title">Let’s light up<br><em>the evening.</em></h2>
+        </div>
+        <p class="section-intro">Tap each diya to give a little wish its own glow. You can light them one by one, or all at once.</p>
+      </div>
+
+      <div class="diya-tray" id="diya-tray">
+        <button class="diya-tile" type="button" aria-pressed="false" aria-label="Light the diya for joy" data-quality="joy">
+          <svg class="diya-illustration" viewBox="0 0 100 100" aria-hidden="true">
+            <ellipse class="diya-halo" cx="50" cy="48" rx="35" ry="34"/>
+            <path class="diya-flame" d="M50 16c-2 11-13 17-13 28a13 13 0 0 0 26 0c0-8-6-13-8-20-1 6-4 9-5 10 1-7-1-13 0-18Z"/>
+            <path class="diya-flame-core" d="M50 36c-4 6-5 9-5 13a5 5 0 0 0 10 0c0-4-2-7-5-13Z"/>
+            <path class="diya-wick" d="M50 50v7"/>
+            <path class="diya-bowl" d="M18 57c4 20 60 28 64 0-18 8-46 8-64 0Z"/>
+            <path class="diya-rim" d="M17 57c17 9 49 9 66 0"/>
+            <path class="diya-detail" d="M31 67c4 5 10 7 14 7m9 1c6-1 10-4 13-7"/>
+          </svg>
+          <span class="diya-name">Joy</span>
+          <span class="diya-hint">a brighter heart</span>
+        </button>
+        <button class="diya-tile" type="button" aria-pressed="false" aria-label="Light the diya for peace" data-quality="peace">
+          <svg class="diya-illustration" viewBox="0 0 100 100" aria-hidden="true">
+            <ellipse class="diya-halo" cx="50" cy="48" rx="35" ry="34"/>
+            <path class="diya-flame" d="M50 16c-2 11-13 17-13 28a13 13 0 0 0 26 0c0-8-6-13-8-20-1 6-4 9-5 10 1-7-1-13 0-18Z"/>
+            <path class="diya-flame-core" d="M50 36c-4 6-5 9-5 13a5 5 0 0 0 10 0c0-4-2-7-5-13Z"/>
+            <path class="diya-wick" d="M50 50v7"/>
+            <path class="diya-bowl" d="M18 57c4 20 60 28 64 0-18 8-46 8-64 0Z"/>
+            <path class="diya-rim" d="M17 57c17 9 49 9 66 0"/>
+            <path class="diya-detail" d="M31 67c4 5 10 7 14 7m9 1c6-1 10-4 13-7"/>
+          </svg>
+          <span class="diya-name">Peace</span>
+          <span class="diya-hint">room to breathe</span>
+        </button>
+        <button class="diya-tile" type="button" aria-pressed="false" aria-label="Light the diya for big dreams" data-quality="big dreams">
+          <svg class="diya-illustration" viewBox="0 0 100 100" aria-hidden="true">
+            <ellipse class="diya-halo" cx="50" cy="48" rx="35" ry="34"/>
+            <path class="diya-flame" d="M50 16c-2 11-13 17-13 28a13 13 0 0 0 26 0c0-8-6-13-8-20-1 6-4 9-5 10 1-7-1-13 0-18Z"/>
+            <path class="diya-flame-core" d="M50 36c-4 6-5 9-5 13a5 5 0 0 0 10 0c0-4-2-7-5-13Z"/>
+            <path class="diya-wick" d="M50 50v7"/>
+            <path class="diya-bowl" d="M18 57c4 20 60 28 64 0-18 8-46 8-64 0Z"/>
+            <path class="diya-rim" d="M17 57c17 9 49 9 66 0"/>
+            <path class="diya-detail" d="M31 67c4 5 10 7 14 7m9 1c6-1 10-4 13-7"/>
+          </svg>
+          <span class="diya-name">Big dreams</span>
+          <span class="diya-hint">and brave beginnings</span>
+        </button>
+        <button class="diya-tile" type="button" aria-pressed="false" aria-label="Light the diya for laughter" data-quality="laughter">
+          <svg class="diya-illustration" viewBox="0 0 100 100" aria-hidden="true">
+            <ellipse class="diya-halo" cx="50" cy="48" rx="35" ry="34"/>
+            <path class="diya-flame" d="M50 16c-2 11-13 17-13 28a13 13 0 0 0 26 0c0-8-6-13-8-20-1 6-4 9-5 10 1-7-1-13 0-18Z"/>
+            <path class="diya-flame-core" d="M50 36c-4 6-5 9-5 13a5 5 0 0 0 10 0c0-4-2-7-5-13Z"/>
+            <path class="diya-wick" d="M50 50v7"/>
+            <path class="diya-bowl" d="M18 57c4 20 60 28 64 0-18 8-46 8-64 0Z"/>
+            <path class="diya-rim" d="M17 57c17 9 49 9 66 0"/>
+            <path class="diya-detail" d="M31 67c4 5 10 7 14 7m9 1c6-1 10-4 13-7"/>
+          </svg>
+          <span class="diya-name">Laughter</span>
+          <span class="diya-hint">the kind that stays</span>
+        </button>
+        <button class="diya-tile" type="button" aria-pressed="false" aria-label="Light the diya for sweet moments" data-quality="sweet moments">
+          <svg class="diya-illustration" viewBox="0 0 100 100" aria-hidden="true">
+            <ellipse class="diya-halo" cx="50" cy="48" rx="35" ry="34"/>
+            <path class="diya-flame" d="M50 16c-2 11-13 17-13 28a13 13 0 0 0 26 0c0-8-6-13-8-20-1 6-4 9-5 10 1-7-1-13 0-18Z"/>
+            <path class="diya-flame-core" d="M50 36c-4 6-5 9-5 13a5 5 0 0 0 10 0c0-4-2-7-5-13Z"/>
+            <path class="diya-wick" d="M50 50v7"/>
+            <path class="diya-bowl" d="M18 57c4 20 60 28 64 0-18 8-46 8-64 0Z"/>
+            <path class="diya-rim" d="M17 57c17 9 49 9 66 0"/>
+            <path class="diya-detail" d="M31 67c4 5 10 7 14 7m9 1c6-1 10-4 13-7"/>
+          </svg>
+          <span class="diya-name">Sweet moments</span>
+          <span class="diya-hint">with your favourite people</span>
+        </button>
+      </div>
+
+      <div class="lights-footer">
+        <div class="progress-copy">
+          <span class="progress-count" id="progress-count">0 <small>/ 5</small></span>
+          <span class="progress-caption" id="progress-caption" aria-live="polite">Your little lights are waiting.</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Diyas lit" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+        <button class="button button-quiet" id="light-all" type="button">Light all five <span aria-hidden="true">✦</span></button>
+      </div>
+    </section>
+
+    <section class="note-section section-wrap" id="note" aria-labelledby="note-title">
+      <div class="note-intro">
+        <p class="section-kicker"><span>02</span> A NOTE, JUST FOR YOU</p>
+        <h2 id="note-title">A little<br><em>something from me.</em></h2>
+        <p>Some wishes are too lovely to leave unsaid. This one is yours, Khushi.</p>
+        <div class="note-stamp" aria-hidden="true"><span>WITH</span><strong>♥</strong><span>CARE</span></div>
+      </div>
+
+      <article class="letter-card" id="letter-card">
+        <div class="letter-decoration letter-decoration-top" aria-hidden="true">✦ &nbsp; ✧ &nbsp; ✦</div>
+        <div class="letter-heading">
+          <span class="letter-overline">A FESTIVE LITTLE LETTER</span>
+          <span class="letter-date">DIWALI, 2026</span>
+        </div>
+        <div class="letter-rule"><span>✦</span></div>
+        <p class="letter-preview">“Khushi, you have a way of making ordinary days feel a little brighter.”</p>
+        <div class="letter-content" id="letter-content" hidden>
+          <p>Dear Khushi,</p>
+          <p>Diwali is a celebration of little lights and hopeful new beginnings. I hope your evening is full of laughter, your favourite sweets, and the kind of happiness that lingers long after the diyas have gone out.</p>
+          <p>May the year ahead bring you closer to every dream you’re holding, and give you a hundred small reasons to smile along the way. Keep shining in your own lovely way.</p>
+          <p>Wishing you the warmest, brightest Diwali.</p>
+          <p class="letter-signoff">With lots of love,<br><span>Tomato</span></p>
+        </div>
+        <button class="button button-letter" id="letter-toggle" type="button" aria-expanded="false" aria-controls="letter-content">
+          <span class="button-label">Unfold your note</span>
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="letter-decoration letter-decoration-bottom" aria-hidden="true">A WISH SENT WITH LIGHT</div>
+      </article>
+    </section>
+
+    <section class="rangoli-section section-wrap" id="rangoli" aria-labelledby="rangoli-title">
+      <div class="section-heading rangoli-heading">
+        <div>
+          <p class="section-kicker"><span>03</span> A LITTLE COLOUR</p>
+          <h2 id="rangoli-title">Make a rangoli<br><em>of your own.</em></h2>
+          <p class="rangoli-copy">Pick the colours you love, then give your pattern a little bloom. Every rangoli is its own kind of magic.</p>
+        </div>
+        <div class="rangoli-controls">
+          <span class="control-label">PICK A PALETTE</span>
+          <div class="palette-options" role="group" aria-label="Choose rangoli colours">
+            <button class="palette-swatch is-selected" type="button" data-palette="sunset" aria-label="Sunset palette" aria-pressed="true" style="--swatch-a:#f2b95f;--swatch-b:#e57864;--swatch-c:#ca8ea7"></button>
+            <button class="palette-swatch" type="button" data-palette="lotus" aria-label="Lotus palette" aria-pressed="false" style="--swatch-a:#f3b1c5;--swatch-b:#bc8bc9;--swatch-c:#f0c77b"></button>
+            <button class="palette-swatch" type="button" data-palette="garden" aria-label="Garden palette" aria-pressed="false" style="--swatch-a:#a8bb86;--swatch-b:#dfad69;--swatch-c:#dd8872"></button>
+            <button class="palette-swatch" type="button" data-palette="twilight" aria-label="Twilight palette" aria-pressed="false" style="--swatch-a:#9c9cce;--swatch-b:#df9cb0;--swatch-c:#efc578"></button>
+          </div>
+          <button class="button button-outline" id="bloom-button" type="button"><span>Bloom the rangoli</span><span aria-hidden="true">✦</span></button>
+          <p class="palette-status" id="palette-status" aria-live="polite">Sunset colours, glowing softly.</p>
+        </div>
+      </div>
+
+      <div class="rangoli-stage">
+        <span class="rangoli-stage-note rangoli-note-left" aria-hidden="true">MADE ONE PETAL AT A TIME</span>
+        <div class="rangoli-halo"></div>
+        <svg class="rangoli-art is-bloomed" id="rangoli-art" viewBox="0 0 400 400" role="img" aria-label="A colourful circular rangoli pattern">
+          <circle class="rangoli-outline rangoli-outline-outer" cx="200" cy="200" r="185" fill="none"/>
+          <circle class="rangoli-dots" cx="200" cy="200" r="171" fill="none"/>
+          <g id="rangoli-petals"></g>
+          <circle class="rangoli-outline rangoli-outline-middle" cx="200" cy="200" r="107" fill="none"/>
+          <circle class="rangoli-outline rangoli-outline-inner" cx="200" cy="200" r="74" fill="none"/>
+          <g class="rangoli-center" aria-hidden="true">
+            <path class="center-flower" d="M200 153c8 17 18 27 35 35-17 8-27 18-35 35-8-17-18-27-35-35 17-8 27-18 35-35Z"/>
+            <circle class="center-core" cx="200" cy="188" r="8"/>
+            <circle class="center-dot" cx="200" cy="188" r="2.4"/>
+          </g>
+        </svg>
+        <span class="rangoli-stage-note rangoli-note-right" aria-hidden="true">A LITTLE JOY FOR YOUR HOME</span>
+      </div>
+    </section>
+
+    <section class="wishes-section section-wrap" id="wishes" aria-labelledby="wishes-title">
+      <div class="section-heading wishes-heading">
+        <div>
+          <p class="section-kicker"><span>04</span> PICK A LITTLE WISH</p>
+          <h2 id="wishes-title">Three tiny wishes.<br><em>Which one calls to you?</em></h2>
+        </div>
+        <p class="section-intro">Choose a little star to uncover a Diwali wish made just for this moment.</p>
+      </div>
+
+      <div class="fortune-grid">
+        <button class="fortune-card" type="button" aria-expanded="false" aria-controls="wish-heart">
+          <span class="fortune-number">01</span>
+          <span class="fortune-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none"><path d="M22 36s-14-8.7-14-19a7.6 7.6 0 0 1 14-4 7.6 7.6 0 0 1 14 4c0 10.3-14 19-14 19Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 20h5l2-4 4 11 2-5h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="fortune-title">For your heart</span>
+          <span class="fortune-hint">tap to uncover <i aria-hidden="true">↗</i></span>
+          <span class="fortune-reveal" id="wish-heart" hidden>May your days be full of people who make you feel as loved as you are.</span>
+        </button>
+        <button class="fortune-card" type="button" aria-expanded="false" aria-controls="wish-dreams">
+          <span class="fortune-number">02</span>
+          <span class="fortune-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none"><path d="m22 5 4.5 11.5L39 21l-12.5 4.5L22 38l-4.5-12.5L5 21l12.5-4.5L22 5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m33 5 1.5 4L39 11l-4.5 1.5L33 17l-1.5-4.5L27 11l4.5-2L33 5Z" fill="currentColor"/></svg></span>
+          <span class="fortune-title">For your dreams</span>
+          <span class="fortune-hint">tap to uncover <i aria-hidden="true">↗</i></span>
+          <span class="fortune-reveal" id="wish-dreams" hidden>May every brave little step lead you somewhere wonderful.</span>
+        </button>
+        <button class="fortune-card" type="button" aria-expanded="false" aria-controls="wish-joy">
+          <span class="fortune-number">03</span>
+          <span class="fortune-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none"><path d="M22 37s-15-9.1-15-20a8.2 8.2 0 0 1 15-4.3A8.2 8.2 0 0 1 37 17c0 10.9-15 20-15 20Z" fill="currentColor" fill-opacity=".12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 22c1.5 2.5 4 3.8 8 3.8s6.5-1.3 8-3.8M17 17h.01M27 17h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <span class="fortune-title">For your everyday</span>
+          <span class="fortune-hint">tap to uncover <i aria-hidden="true">↗</i></span>
+          <span class="fortune-reveal" id="wish-joy" hidden>May ordinary Tuesdays surprise you with extraordinary reasons to smile.</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="sparkle-section section-wrap" id="sparkle" aria-labelledby="sparkle-title">
+      <div class="sparkle-sky" aria-hidden="true">
+        <span class="sky-star sky-star-a">✦</span><span class="sky-star sky-star-b">✧</span><span class="sky-star sky-star-c">·</span><span class="sky-star sky-star-d">✦</span>
+      </div>
+      <div class="sparkle-copy">
+        <p class="section-kicker"><span>05</span> ONE LAST LITTLE SPARKLE</p>
+        <h2 id="sparkle-title">Send a wish<br><em>up into the night.</em></h2>
+        <p>Make a wish for the year ahead, Khushi. I'll send a little sparkle along with it.</p>
+        <button class="button button-primary sparkle-button" id="sparkle-button" type="button">
+          <span>Launch a little firework</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2Zm7 12 .9 3.1L23 18l-3.1.9L19 22l-.9-3.1L15 18l3.1-.9L19 14Z" fill="currentColor"/></svg>
+        </button>
+        <p class="sparkle-response" id="sparkle-response" aria-live="polite">Your wish can stay a secret. The sparkle is for everyone to see.</p>
+      </div>
+      <div class="sparkle-art" aria-hidden="true">
+        <span class="sparkle-ring sparkle-ring-one"></span>
+        <span class="sparkle-ring sparkle-ring-two"></span>
+        <span class="sparkle-burst sparkle-burst-one">✦</span>
+        <span class="sparkle-burst sparkle-burst-two">✧</span>
+        <span class="sparkle-burst sparkle-burst-three">✦</span>
+        <span class="sparkle-burst sparkle-burst-four">·</span>
+        <div class="sparkle-moon"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="footer-top" href="#top" aria-label="Back to the top">↑ <span>BACK TO THE GLOW</span></a>
+    <div class="footer-bottom">
+      <p>Made for Khushi, with love <span aria-hidden="true">✦</span> <strong>Tomato</strong></p>
+      <p class="footer-note">May your year be bright in all the right ways.</p>
+      <span class="footer-year">DIWALI 2026</span>
+    </div>
+    <p class="closing-love"><span aria-hidden="true">✦</span><strong>Forwarding lots of love from Tomato to Khushi</strong><span aria-hidden="true">✦</span></p>
+  </footer>
+</body>
+</html>
